@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="page-title">Juego de Aprendizaje</h1>
+        
+        <button id="info-btn" title="Informacion del Proyecto">
+            <i class="fas fa-info-circle"></i>
+        </button>
+
+        <div id="main-menu" class="menu active">
+            <button class="btn primary-btn gray-bg" id="btn-iniciar">
+                Iniciar
+                <div class="border-bottom gray"></div>
+            </button>
+            <button class="btn primary-btn blue-bg" id="btn-ai-help">
+                Ayuda IA
+                <div class="border-bottom blue"></div>
+            </button>
+            <button class="btn primary-btn red-bg">
+                Salir
+                <div class="border-bottom red"></div>
+            </button>
+        </div>
+        <div id="start-menu" class="menu hidden">
+            <button class="btn secondary-btn quiz-btn" data-category="algebra">Álgebra</button>
+            <button class="btn secondary-btn quiz-btn" data-category="filosofia">Filosofía</button>
+            <button class="btn secondary-btn quiz-btn" data-category="desarrollo">Desarrollo Personal</button>
+            <button class="btn secondary-btn red" id="btn-regresar">Regresar</button>
+        </div>
+        <div id="quiz-menu" class="menu hidden">
+            <h2 id="quiz-question"></h2>
+            <div id="quiz-options">
+            </div>
+            <div id="quiz-info">
+                <span id="quiz-score" class="hidden">Puntuación 0</span>
+                <span id="quiz-progress" class="hidden">Pregunta 1/20</span>
+            </div>
+            <button class="btn secondary-btn red hidden" id="btn-finish-quiz">Volver al Menú Principal</button>
+        </div>
+        <div id="ai-menu" class="menu hidden">
+            <div id="chat-output"></div>
+            <textarea id="user-input" placeholder="Escribe tu pregunta aquí"></textarea>
+            <button class="btn secondary-btn blue" id="btn-send-ai">Enviar Pregunta</button>
+            <button class="btn secondary-btn red" id="btn-regresar-ai">Regresar</button>
+        </div>
+    </div>
+
+    <div id="feedback-overlay" class="hidden">
+        <span id="feedback-icon"></span>
+    </div>
+
+    <div id="info-modal" class="hidden">
+        <div id="info-content">
+            <span id="close-modal">&times;</span>
+            <h3>Proyecto Quiz Interactivo</h3>
+            <p>Juego de aprendizaje</p>
+            <hr>
+            <h4>Desarrollado por:</h4>
+            <p>Guzmán Jaimes Jacobo</p>
+            
+            <div class="collaborator-info">
+                <h4>Colaborador:</h4>
+                <p>GatosaurocrackWorl</p>
+            </div>
+            <hr>
+            
+            <p class="copyright">© Guzmán Jaimes Jacobo. Todos los derechos reservados.</p>
+            <p class="copyright collaborator-copyright">© GatosaurocrackWorl. Todos los derechos reservados (Colaboración).</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
